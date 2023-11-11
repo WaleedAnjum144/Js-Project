@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background-color: #faebd7;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.btn {
+    font-size: 20px;
+    color: rgb(218, 8, 8);
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    background-color: transparent;
+    border-radius: 0px;
+    border: 1px solid rgb(218, 8, 8);
+    cursor: pointer;
+    z-index: 1;
+   
+
+}
+
+.btn1,.btn2,.btn3,.btn4,.btn5{
+    position: relative;
+}
+
+/* for btn1  */
+
+.btn1::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: left;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn1:hover::before{
+    width: 100%;
+}
+
+
+/* btn2    */
+
+.btn2::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 0%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: left;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn2:hover::before{
+    height: 100%;
+}
+
+
+/* for btn3  */
+
+.btn3::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: left;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn3:hover::before{
+    width: 100%;
+}
+
+
+/* btn4  */
+
+.btn4::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 0%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: left;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn4:hover::before{
+    height: 100%;
+}
+
+
+/* btn5  */
+
+.btn5::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    transform-origin: center center ;
+    transition: all 0.5s;
+    z-index: -1;
+}
+
+.btn5:hover::before{
+    width: 100%;
+    transform-origin: center center;
+    left: 0%;
+}
